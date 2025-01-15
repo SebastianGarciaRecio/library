@@ -98,7 +98,8 @@ async function deleteLibro() {
        const data = await response.json();
        console.log(data)
        if(data.success){
-           alert("Eliminado correctamente")
+            getLibros();
+            alert("Eliminado correctamente")
        }else{
            alert("No existe")
        }
