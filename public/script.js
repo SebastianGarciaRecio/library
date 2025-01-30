@@ -1,7 +1,9 @@
 document.getElementById("addProductForm").addEventListener("submit", addLibro);
 document.getElementById("getLibroISBN").addEventListener("click", getLibro);
-document.getElementById("getLibros").addEventListener("click", getLibros);
 document.getElementById("eliminarLibro").addEventListener("click", deleteLibro);
+document.getElementById("getLibros").addEventListener("click", getLibros);
+
+getLibros();
 
 
 async function addLibro(event) {
@@ -23,6 +25,7 @@ async function addLibro(event) {
 
    const data = await response.json();
    if (data.success) {
+      getLibros();
      alert("Añadido correctamente");
    } else {
      alert("No se puedo añadir");

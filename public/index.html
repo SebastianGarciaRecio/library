@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Libreria</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <h1>Libreria</h1>
 
-    <h2>Agregar libro</h2>
-    <form id="addProductForm">
-      <label for="ISBN">ISBN</label>
-      <input type="text" id="ISBN" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Libreria</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-      <label for="titulo">titulo</label>
-      <input type="text" id="titulo" />
+<body>
+  <h1>My personal Library<img src="img/libro.png"></h1>
 
-      <label for="autor">autor</label>
-      <input type="text" id="autor" />
+  <form id="addProductForm">
+    <p>ISBN</p>
+    <input type="text" id="ISBN" />
 
-      <button type="submit">Agregar</button>
-    </form>
+    <p>TITLE</p>
+    <input type="text" id="titulo" />
 
-    <h2>Libros</h2>
-    <button id="getLibros">Mostrar todos</button>
-    <br />
-    <input type="text" placeholder="ISBN" id="ISBNNUevo" />
-    <button id="getLibroISBN">Mostrar por ISBN</button>
-    <button id="eliminarLibro">Eliminar por ISBN</button>
-    <table>
-      <thead>
-        <tr>
-          <th>ISBN</th>
-          <th>Titulo</th>
-          <th>Autor</th>
-        </tr>
-      </thead>
-      <tbody id="productList"></tbody>
-    </table>
+    <p>AUTHOR</p>
+    <input type="text" id="autor" />
 
-    <script src="script.js"></script>
-  </body>
+    <button type="submit">Add</button>
+  </form>
+
+  <div id="productListContainer">
+    <div>
+      <button id="getLibros">View books</button>
+    </div>
+
+    <div>
+      <input type="text" placeholder="ISBN" id="ISBNNUevo" />
+      <button id="getLibroISBN">View book for ISBN</button>
+      <button id="eliminarLibro">Delete book for ISBN</button>
+    </div>
+    <div>
+      <table border="1px">
+        <thead>
+          <tr>
+            <th>ISBN</th>
+            <th>Titulo</th>
+            <th>Autor</th>
+          </tr>
+        </thead>
+        <tbody id="productList"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
